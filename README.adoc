@@ -1,0 +1,15 @@
+= DSFinV-K Java
+
+This is a library containing classes to work with the https://www.bzst.de/DE/Unternehmen/Aussenpruefungen/DigitaleSchnittstelleFinV/digitaleschnittstellefinv_node.html[DSFinV-K].
+
+WARNING: This is in the very early stages.
+
+== Resources
+
+* http://support.audicon.net/index.php/idea/idea-aktuelle-downloads/doc_details/66-dtd-datei-vom-01092004.html
+* http://support.audicon.net/index.php/idea/idea-aktuelle-downloads/doc_details/28-gdpdu-beschreibungsstandard.html
+* https://dfka.net/
+** https://dfka.net/taxonomie/
+* https://www.bzst.de/DE/Unternehmen/Aussenpruefungen/DigitaleSchnittstelleFinV/digitaleschnittstellefinv_node.html
+* https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr03153/index_htm.html
+
