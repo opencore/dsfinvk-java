@@ -1,4 +1,4 @@
-package com.opencore;
+package com.opencore.dsfinvk;
 
 @SuppressWarnings("FieldNamingConvention")
 public enum GvTyp {

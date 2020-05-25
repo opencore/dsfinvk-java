@@ -3,7 +3,7 @@ package com.opencore.util;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import com.opencore.stammdaten.StammAbschluss;
+import com.opencore.dsfinvk.stammdaten.StammAbschluss;
 
 public class TaxInformationValidator implements ConstraintValidator<ValidTaxInformation, StammAbschluss> {
 

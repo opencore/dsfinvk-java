@@ -1,4 +1,4 @@
-package com.opencore;
+package com.opencore.dsfinvk;
 
 import java.time.LocalDateTime;
 import java.util.StringJoiner;

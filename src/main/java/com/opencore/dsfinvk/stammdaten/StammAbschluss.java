@@ -1,8 +1,7 @@
-package com.opencore.stammdaten;
+package com.opencore.dsfinvk.stammdaten;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Objects;
 import java.util.StringJoiner;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
@@ -11,7 +10,8 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.opencore.BaseModel;
+import com.opencore.dsfinvk.BaseModel;
+import com.opencore.util.ValidIso3166Alpha3Country;
 import com.opencore.util.ValidTaxInformation;
 import com.opencore.util.ValidVatId;
 
@@ -65,6 +65,7 @@ public class StammAbschluss extends BaseModel {
   private String ort;
 
   @NotBlank
+  @ValidIso3166Alpha3Country
   @JsonProperty("LAND")
   private String land;
 

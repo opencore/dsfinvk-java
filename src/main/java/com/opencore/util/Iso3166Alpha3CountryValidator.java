@@ -5,7 +5,7 @@ import java.util.Set;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-public class Iso3166Alpha3CountryValidator implements ConstraintValidator<ValidTaxInformation, String> {
+public class Iso3166Alpha3CountryValidator implements ConstraintValidator<ValidIso3166Alpha3Country, String> {
 
   private final Set<String> countries = Locale.getISOCountries(Locale.IsoCountryCode.PART1_ALPHA3);
 

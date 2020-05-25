@@ -1,4 +1,4 @@
-package com.opencore.einzelaufzeichnung;
+package com.opencore.dsfinvk.einzelaufzeichnung;
 
 import java.math.BigDecimal;
 import java.util.StringJoiner;
@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.opencore.GvTyp;
+import com.opencore.dsfinvk.GvTyp;
 import com.opencore.util.NumericBooleanDeserializer;
 
 /**
