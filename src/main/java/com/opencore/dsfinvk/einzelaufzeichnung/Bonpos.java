@@ -24,6 +24,8 @@ import com.opencore.util.NumericBooleanDeserializer;
  */
 public class Bonpos extends BaseEinzelaufzeichnung {
 
+  public static final String FILENAME = "lines.csv";
+
   @Size(max = 50)
   @JsonProperty("GUTSCHEIN_NR")
   private String gutscheinNr;

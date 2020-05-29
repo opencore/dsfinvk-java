@@ -15,8 +15,12 @@ import com.opencore.util.ValidVatId;
  * <p/>
  * Die Felder stellen den Abrechnungsort der Kasse dar.
  * Der Abrechnungsort kann z. B. eine Abteilungsbezeichnung, eine Filiale oder ein variabler Punkt sein.
+ * <p/>
+ * Technischer Name der Datei: {@code location.csv}
  */
 public class StammOrte extends BaseModel {
+
+  public static final String FILENAME = "location.csv";
 
   @NotBlank
   @Size(max = 60)

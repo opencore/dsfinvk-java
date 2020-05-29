@@ -24,6 +24,8 @@ import com.opencore.util.ValidVatId;
 @ValidTaxInformation
 public class StammAbschluss extends BaseModel {
 
+  public static final String FILENAME = "cashpointclosing.csv";
+
   @PastOrPresent
   @JsonProperty("Z_BUCHUNGSTAG")
   private LocalDate zBuchungstag;
