@@ -16,9 +16,9 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  */
 @Target(TYPE)
 @Retention(RUNTIME)
-@Constraint(validatedBy = TaxInformationValidator.class)
+@Constraint(validatedBy = StammAbschlussValidator.class)
 @Documented
-public @interface ValidTaxInformation {
+public @interface ValidStammAbschluss {
 
   String message() default "Either STNR or USTID need to be provided";
 

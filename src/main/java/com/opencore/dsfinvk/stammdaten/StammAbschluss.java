@@ -12,7 +12,7 @@ import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.opencore.dsfinvk.BaseModel;
 import com.opencore.util.ValidIso3166Alpha3Country;
-import com.opencore.util.ValidTaxInformation;
+import com.opencore.util.ValidStammAbschluss;
 import com.opencore.util.ValidVatId;
 
 /**
@@ -21,7 +21,7 @@ import com.opencore.util.ValidVatId;
  * <p/>
  * Technischer Name der Datei: {@code cashpointclosing.csv}
  */
-@ValidTaxInformation
+@ValidStammAbschluss
 public class StammAbschluss extends BaseModel {
 
   public static final String FILENAME = "cashpointclosing.csv";
