@@ -40,6 +40,7 @@ public class StammKassen extends BaseModel {
   @JsonProperty("KASSE_SW_VERSION")
   private String kasseSwVersion;
 
+   // TODO: Das sollte eigentlich eher direkt ein Currency Feld sein
   @NotBlank
   @Size(max = 3)
   @ValidIso4217Currency
