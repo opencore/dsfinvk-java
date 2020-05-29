@@ -18,7 +18,7 @@ public class NumericBooleanDeserializer extends JsonDeserializer<Boolean> {
     JsonToken currentToken = p.getCurrentToken();
     if (currentToken == JsonToken.VALUE_STRING) {
       String text = p.getText();
-      if (text == null) {
+      if (text == null || text.isBlank()) {
         return null;
       }
       switch(text.trim()) {
