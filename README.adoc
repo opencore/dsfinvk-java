@@ -4,12 +4,31 @@ This is a library containing classes to work with the https://www.bzst.de/DE/Unt
 
 WARNING: This is in the very early stages.
 
+== Terminology
+
+DFKA :: _Deutscher Fachverband für Kassen- und Abrechnungssystemtechnik im bargeld- und bargeldlosen Zahlungsverkehr e.V._
+
+GDPdU :: _Grundsätze zum Datenzugriff und zur Prüfbarkeit digitaler Unterlagen_
++
+These have replaced the _GoBD_ in 2015
+The GDPdU was initially released in 2014 but the latest version is from 2019.
+
+GoBD :: _Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung von Büchern, Aufzeichnungen und Unterlagen in elektronischer Form sowie zum Datenzugriff_
++
+They were replaced by  the _GDPdU_ in 2015.
+
+
 == Resources
 
-* http://support.audicon.net/index.php/idea/idea-aktuelle-downloads/doc_details/66-dtd-datei-vom-01092004.html
-* http://support.audicon.net/index.php/idea/idea-aktuelle-downloads/doc_details/28-gdpdu-beschreibungsstandard.html
-* https://dfka.net/
-** https://dfka.net/taxonomie/
-* https://www.bzst.de/DE/Unternehmen/Aussenpruefungen/DigitaleSchnittstelleFinV/digitaleschnittstellefinv_node.html
-* https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr03153/index_htm.html
+* https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Weitere_Steuerthemen/Abgabenordnung/2019-11-28-GoBD.pdf?__blob=publicationFile&v=12[GoBD 2019-11-28]
+** https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Weitere_Steuerthemen/Abgabenordnung/2019-11-28-GoBD.html[Quelle]
+* https://www.bundesfinanzministerium.de/Content/DE/Standardartikel/Themen/Steuern/Weitere_Steuerthemen/Abgabeordnung/2019-11-28-GoBD-Ergaenzende-Informationen-zur-Datentraegerueberlassung.html[Ergänzende Informationen zur Datenträgerüberlassung] der GoBD
+* http://support.audicon.net/index.php/idea/idea-aktuelle-downloads/doc_details/66-dtd-datei-vom-01092004.html[GDPdU DTD 2004]
+* http://support.audicon.net/index.php/idea/idea-aktuelle-downloads/doc_details/28-gdpdu-beschreibungsstandard.html[GDPdU Beschreibung]
+* https://dfka.net/[DFKA]
+** https://dfka.net/taxonomie/[DFKA Taxonomie]
+* https://www.bzst.de/DE/Unternehmen/Aussenpruefungen/DigitaleSchnittstelleFinV/digitaleschnittstellefinv_node.html[DSFinV-K]
+* https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr03153/index_htm.html[BSI TR 03153]
+* https://www.omg.org/cgi-bin/doc?retail/2017-07-13[POSlog]
+
 
