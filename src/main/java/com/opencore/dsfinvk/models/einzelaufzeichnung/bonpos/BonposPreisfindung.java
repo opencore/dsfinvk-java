@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 
 import com.opencore.dsfinvk.util.ValidUstSchluessel;
-import com.opencore.dsfinvk.util.annotations.Column;
+import com.opencore.gdpdu.index.annotations.Column;
 
 /**
  * In dieser Tabelle werden Detailangaben zur Entstehung des Preises abgelegt, z. B. spezielle Kunden-Rabatte oder auch Aufschläge.

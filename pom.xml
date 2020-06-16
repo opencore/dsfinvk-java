@@ -28,7 +28,12 @@
   <dependencies>
     <dependency>
       <groupId>com.opencore</groupId>
-      <artifactId>gdpdu</artifactId>
+      <artifactId>gdpdu-models</artifactId>
+      <version>${gdpdu.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.opencore</groupId>
+      <artifactId>gdpdu-data-parser</artifactId>
       <version>${gdpdu.version}</version>
     </dependency>
     <dependency>

@@ -5,7 +5,7 @@ import java.util.StringJoiner;
 import javax.validation.constraints.NotNull;
 
 import com.opencore.dsfinvk.models.einzelaufzeichnung.BaseBon;
-import com.opencore.dsfinvk.util.annotations.Column;
+import com.opencore.gdpdu.index.annotations.Column;
 
 public class TseTransaktionen extends BaseBon {
 

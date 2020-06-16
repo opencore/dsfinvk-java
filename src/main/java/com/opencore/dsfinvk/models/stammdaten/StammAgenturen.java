@@ -9,7 +9,7 @@ import com.opencore.dsfinvk.util.StrictGroup;
 import com.opencore.dsfinvk.util.ValidIso3166Alpha3Country;
 import com.opencore.dsfinvk.util.ValidStammAgenturen;
 import com.opencore.dsfinvk.util.ValidVatId;
-import com.opencore.dsfinvk.util.annotations.Column;
+import com.opencore.gdpdu.index.annotations.Column;
 
 /**
  * Werden Beträge "für Rechnung Dritter" erfasst (durchlaufende Posten), ist der Dritte verantwortlich für die korrekte Erfassung der Umsatzsteuer (z. B. Shop-in-Shop, wobei es unabhängige Unternehmer sein müssen).

@@ -12,6 +12,7 @@ public class StammUstValidator implements ConstraintValidator<ValidStammUst, Sta
 
   private static final Map<Long, BigDecimal> UST_SAETZE = new HashMap<>();
 
+  @Override
   public boolean isValid(StammUst obj, ConstraintValidatorContext context) {
     if (!UST_SAETZE.containsKey(obj.getUstSchluessel())) {
       return true;

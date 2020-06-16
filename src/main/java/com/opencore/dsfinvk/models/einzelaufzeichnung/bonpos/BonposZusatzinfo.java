@@ -9,7 +9,7 @@ import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
 import com.opencore.dsfinvk.util.ValidUstSchluessel;
-import com.opencore.dsfinvk.util.annotations.Column;
+import com.opencore.gdpdu.index.annotations.Column;
 
 public class BonposZusatzinfo extends BaseBonpos {
 

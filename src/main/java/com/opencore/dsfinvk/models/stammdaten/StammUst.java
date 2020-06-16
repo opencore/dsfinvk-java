@@ -11,7 +11,7 @@ import javax.validation.constraints.Size;
 import com.opencore.dsfinvk.models.BaseModel;
 import com.opencore.dsfinvk.util.ValidStammUst;
 import com.opencore.dsfinvk.util.ValidUstSchluessel;
-import com.opencore.dsfinvk.util.annotations.Column;
+import com.opencore.gdpdu.index.annotations.Column;
 
 /**
  * Stammdaten zur Umsatzsteuer (ID, USt-Satz, Beschreibung).

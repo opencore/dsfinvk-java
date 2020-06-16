@@ -8,7 +8,7 @@ import javax.validation.constraints.Size;
 
 import com.opencore.dsfinvk.models.BaseModel;
 import com.opencore.dsfinvk.models.ZahlartTyp;
-import com.opencore.dsfinvk.util.annotations.Column;
+import com.opencore.gdpdu.index.annotations.Column;
 
 /**
  * Für jeden Zahlarttypen ("ZAHLART_TYP") werden (getrennt nach "ZAHLART_NAME") Summen gebildet ("ZAHLART_BETRAG"), die weiter in der Buchhaltung zu verarbeitenden Gesamtbeträge dargestellt.

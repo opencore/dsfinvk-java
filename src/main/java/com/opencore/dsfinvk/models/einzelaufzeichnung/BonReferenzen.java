@@ -5,7 +5,7 @@ import java.util.StringJoiner;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import com.opencore.dsfinvk.util.annotations.Column;
+import com.opencore.gdpdu.index.annotations.Column;
 
 /**
  * In dieser Datei können Referenzen auf Vorgänge innerhalb der DSFinV-K ebenso wie Verweise auf externe Systeme vorgenommen werden.

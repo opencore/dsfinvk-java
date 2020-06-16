@@ -7,7 +7,7 @@ import javax.validation.constraints.Size;
 import com.opencore.dsfinvk.models.BaseModel;
 import com.opencore.dsfinvk.util.ValidIso3166Alpha3Country;
 import com.opencore.dsfinvk.util.ValidVatId;
-import com.opencore.dsfinvk.util.annotations.Column;
+import com.opencore.gdpdu.index.annotations.Column;
 
 /**
  * Namen und Orte der einzelnen Betriebsstätten mit Kassen.

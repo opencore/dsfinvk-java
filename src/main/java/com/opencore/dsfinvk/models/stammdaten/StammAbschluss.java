@@ -13,7 +13,7 @@ import com.opencore.dsfinvk.models.BaseModel;
 import com.opencore.dsfinvk.util.ValidIso3166Alpha3Country;
 import com.opencore.dsfinvk.util.ValidStammAbschluss;
 import com.opencore.dsfinvk.util.ValidVatId;
-import com.opencore.dsfinvk.util.annotations.Column;
+import com.opencore.gdpdu.index.annotations.Column;
 
 /**
  * Daten des Kassenabschlusses, dazu gehören Datum, Uhrzeit und Start- sowie End-ID.

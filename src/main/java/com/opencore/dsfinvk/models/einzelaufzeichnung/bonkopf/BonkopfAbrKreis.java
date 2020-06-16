@@ -4,7 +4,7 @@ import java.util.StringJoiner;
 import javax.validation.constraints.Size;
 
 import com.opencore.dsfinvk.models.einzelaufzeichnung.BaseBon;
-import com.opencore.dsfinvk.util.annotations.Column;
+ import com.opencore.gdpdu.index.annotations.Column;
 
 /**
  * Der Abrechnungskreis ist eine variable Einheit, mit der ein Beleg einem bestimmten Kriterium (Tisch, Abteilung etc.) zugeordnet werden kann.

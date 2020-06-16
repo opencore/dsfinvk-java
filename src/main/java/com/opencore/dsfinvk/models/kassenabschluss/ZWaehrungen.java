@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
 
 import com.opencore.dsfinvk.models.BaseModel;
 import com.opencore.dsfinvk.util.ValidIso4217Currency;
-import com.opencore.dsfinvk.util.annotations.Column;
+import com.opencore.gdpdu.index.annotations.Column;
 
 /**
  * Für jede Währung ("ZAHLART_WAEH") wird die Summe in dieser Datei dargestellt.

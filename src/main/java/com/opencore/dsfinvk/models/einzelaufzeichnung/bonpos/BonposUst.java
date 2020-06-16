@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 
 import com.opencore.dsfinvk.util.ValidUstSchluessel;
-import com.opencore.dsfinvk.util.annotations.Column;
+import com.opencore.gdpdu.index.annotations.Column;
 
 // TODO: Validator, dass entweder brutto oder (netto + ust) gesetzt ist
 

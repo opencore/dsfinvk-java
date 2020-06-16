@@ -13,7 +13,7 @@ import com.opencore.dsfinvk.models.einzelaufzeichnung.BaseBon;
 import com.opencore.dsfinvk.util.NumericBooleanDeserializer;
 import com.opencore.dsfinvk.util.ValidIso3166Alpha3Country;
 import com.opencore.dsfinvk.util.ValidVatId;
-import com.opencore.dsfinvk.util.annotations.Column;
+import com.opencore.gdpdu.index.annotations.Column;
 
 /**
  * Da es sich im Bonkopf im Regelfall nur um die kumulierten Zahlen aus den einzelnen Bonpositionen handelt, ist die o. b. Aufgliederung der einzelnen Zahlen des Bonkopfes auf der Positionsebene erforderlich.

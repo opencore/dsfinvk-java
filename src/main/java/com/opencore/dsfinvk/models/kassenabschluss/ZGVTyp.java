@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 import com.opencore.dsfinvk.models.BaseModel;
 import com.opencore.dsfinvk.models.GvTyp;
 import com.opencore.dsfinvk.util.ValidUstSchluessel;
-import com.opencore.dsfinvk.util.annotations.Column;
+import com.opencore.gdpdu.index.annotations.Column;
 
 /**
  * Für jeden Geschäftsvorfalltypen ("GV_Typ") werden (getrennt nach "GV_NAME" als Summen) die weiter zu verarbeitenden Gesamtbeträge dargestellt.

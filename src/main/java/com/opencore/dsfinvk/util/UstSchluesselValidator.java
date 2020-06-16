@@ -5,6 +5,7 @@ import javax.validation.ConstraintValidatorContext;
 
 public class UstSchluesselValidator implements ConstraintValidator<ValidUstSchluessel, Long> {
 
+  @Override
   public boolean isValid(Long obj, ConstraintValidatorContext context) {
     if (obj == null) {
       return false;

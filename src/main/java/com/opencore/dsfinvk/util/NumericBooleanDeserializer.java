@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.JsonDeserializer;
 public class NumericBooleanDeserializer extends JsonDeserializer<Boolean> {
 
   @Override
-  public Boolean deserialize(JsonParser p, DeserializationContext ctxt) throws IOException, JsonProcessingException {
+  public Boolean deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
     JsonToken currentToken = p.getCurrentToken();
     if (currentToken == JsonToken.VALUE_STRING) {
       String text = p.getText();

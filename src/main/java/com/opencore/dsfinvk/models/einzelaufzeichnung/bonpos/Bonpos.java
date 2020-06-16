@@ -11,7 +11,7 @@ import javax.validation.constraints.Size;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.opencore.dsfinvk.models.GvTyp;
 import com.opencore.dsfinvk.util.NumericBooleanDeserializer;
-import com.opencore.dsfinvk.util.annotations.Column;
+import com.opencore.gdpdu.index.annotations.Column;
 
 /**
  * Die Datei Bonpos enthält die einzelnen Positionen eines Vorgangs mit der Zuordnung des korrekten USt-Satzes, der Menge und der Art der gelieferten Gegenstände (§ 14 Abs. 4 UStG; § 22 Abs. 2 UStG i. V. m. § 63 Abs. 3 UStDV).

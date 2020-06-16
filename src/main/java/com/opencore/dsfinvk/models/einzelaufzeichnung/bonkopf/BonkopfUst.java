@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 
 import com.opencore.dsfinvk.models.einzelaufzeichnung.BaseBon;
 import com.opencore.dsfinvk.util.ValidVatId;
-import com.opencore.dsfinvk.util.annotations.Column;
+import com.opencore.gdpdu.index.annotations.Column;
 
 /**
  * Da es mehrere USt-Sätze pro Bonkopf geben kann, sind diese in einer Detail-Tabelle aufgeführt.

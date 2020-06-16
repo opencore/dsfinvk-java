@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 import com.opencore.dsfinvk.models.ZahlartTyp;
 import com.opencore.dsfinvk.models.einzelaufzeichnung.BaseBon;
 import com.opencore.dsfinvk.util.ValidIso4217Currency;
-import com.opencore.dsfinvk.util.annotations.Column;
+import com.opencore.gdpdu.index.annotations.Column;
 
 public class BonkopfZahlarten extends BaseBon {
 
