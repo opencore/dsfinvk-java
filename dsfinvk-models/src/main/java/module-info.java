@@ -1,15 +1,7 @@
-module com.opencore.dsfinvk {
-
-  requires com.opencore.gdpdu.data;
-  requires com.opencore.gdpdu.models;
-  requires com.opencore.gdpdu.index;
-  requires commons.csv;
+module com.opencore.dsfinvk.models {
 
   requires java.validation;
-  requires com.fasterxml.jackson.annotation;
-  requires com.fasterxml.jackson.databind;
-  requires java.xml;
-  requires java.desktop;
+  requires com.opencore.gdpdu.models;
 
   exports com.opencore.dsfinvk.models.stammdaten;
   exports com.opencore.dsfinvk.models.einzelaufzeichnung;

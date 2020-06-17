@@ -8,9 +8,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.opencore.dsfinvk.models.einzelaufzeichnung.BaseBon;
-import com.opencore.dsfinvk.util.NumericBooleanDeserializer;
 import com.opencore.dsfinvk.util.ValidIso3166Alpha3Country;
 import com.opencore.dsfinvk.util.ValidVatId;
 import com.opencore.gdpdu.index.annotations.Column;
@@ -56,7 +54,6 @@ public class Bonkopf extends BaseBon {
   @Column("TERMINAL_ID")
   private String terminalId;
 
-  @JsonDeserialize(using = NumericBooleanDeserializer.class)
   @Column("BON_STORNO")
   private Boolean bonStorno;
 
