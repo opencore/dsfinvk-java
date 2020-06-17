@@ -8,9 +8,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PositiveOrZero;
 import javax.validation.constraints.Size;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.opencore.dsfinvk.models.GvTyp;
-import com.opencore.dsfinvk.util.NumericBooleanDeserializer;
 import com.opencore.gdpdu.index.annotations.Column;
 
 /**
@@ -49,11 +47,9 @@ public class Bonpos extends BaseBonpos {
   private String gvName;
 
   @Column("INHAUS")
-  @JsonDeserialize(using = NumericBooleanDeserializer.class)
   private boolean inhaus;
 
   @Column("P_STORNO")
-  @JsonDeserialize(using = NumericBooleanDeserializer.class)
   private boolean pStorno;
 
   // TODO: In der Dokumentation steht nicht, dass dieses Feld positiv sein muss, ich nehme es nur an

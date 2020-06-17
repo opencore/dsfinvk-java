@@ -4,9 +4,7 @@ import java.util.StringJoiner;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.opencore.dsfinvk.models.BaseModel;
-import com.opencore.dsfinvk.util.NumericBooleanDeserializer;
 import com.opencore.dsfinvk.util.ValidIso4217Currency;
 import com.opencore.gdpdu.index.annotations.Column;
 
@@ -47,7 +45,6 @@ public class StammKassen extends BaseModel {
   @Column("KASSE_BASISWAEH_CODE")
   private String kasseBasiswaehCode;
 
-  @JsonDeserialize(using = NumericBooleanDeserializer.class)
   @Column("KEINE_UST_ZUORDNUNG")
   private Boolean keineUstZuordnung;
 
