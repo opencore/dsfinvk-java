@@ -11,6 +11,8 @@ WARNING: This is in the very early stages.
 
 DFKA :: _Deutscher Fachverband für Kassen- und Abrechnungssystemtechnik im bargeld- und bargeldlosen Zahlungsverkehr e.V._
 
+DSFinV-K :: _Digitale Schnittstelle der Finanzverwaltung für Kassensysteme_
+
 GDPdU :: _Grundsätze zum Datenzugriff und zur Prüfbarkeit digitaler Unterlagen_
 +
 These have replaced the _GoBD_ in 2015
