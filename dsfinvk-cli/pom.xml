@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>dsfinvk</artifactId>
+    <groupId>com.opencore</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>dsfinvk-cli</artifactId>
+
+  <name>DSFinV-K CLI</name>
+
+  <properties>
+    <picocli.version>4.3.2</picocli.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.opencore</groupId>
+      <artifactId>dsfinvk-parser</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>info.picocli</groupId>
+      <artifactId>picocli</artifactId>
+      <version>${picocli.version}</version>
+    </dependency>
+  </dependencies>
+
+</project>

@@ -11,6 +11,7 @@
   <modules>
     <module>dsfinvk-models</module>
     <module>dsfinvk-parser</module>
+    <module>dsfinvk-cli</module>
   </modules>
 
   <name>DSFinV-K Parent</name>
