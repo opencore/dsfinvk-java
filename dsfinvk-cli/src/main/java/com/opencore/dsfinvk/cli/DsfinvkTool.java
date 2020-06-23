@@ -1,32 +1,16 @@
 package com.opencore.dsfinvk.cli;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.concurrent.Callable;
-
-import com.opencore.dsfinvk.parser.DsfinvkParser;
-import com.opencore.gdpdu.data.ParsingException;
+import com.opencore.dsfinvk.cli.commands.TableCommand;
+import com.opencore.dsfinvk.cli.commands.ValidationCommand;
 import picocli.CommandLine;
-import picocli.CommandLine.Option;
+import picocli.CommandLine.Command;
 
-public class DsfinvkTool implements Callable<Integer> {
-
-  @Option(names = "-f", description = "Path to the index.xml file", required = true)
-  private File indexXml;
+@Command(subcommands = {TableCommand.class, ValidationCommand.class})
+public class DsfinvkTool {
 
   public static void main(String[] args) {
     int exitCode = new CommandLine(new DsfinvkTool()).execute(args);
     System.exit(exitCode);
   }
 
-  @Override
-  public Integer call() throws Exception {
-    try {
-      DsfinvkParser.parseAndValidate(indexXml);
-    } catch (IOException | ParsingException e) {
-      e.printStackTrace();
-      return 1;
-    }
-    return 0;
-  }
 }
