@@ -31,7 +31,6 @@ import com.opencore.dsfinvk.models.stammdaten.StammKassen;
 import com.opencore.dsfinvk.models.stammdaten.StammOrte;
 import com.opencore.dsfinvk.models.stammdaten.StammTerminals;
 import com.opencore.dsfinvk.models.stammdaten.StammUst;
-import com.opencore.dsfinvk.util.StrictGroup;
 import com.opencore.gdpdu.data.GdpduDataParser;
 import com.opencore.gdpdu.data.ParsingException;
 import com.opencore.gdpdu.index.GdpduIndexParser;
@@ -69,7 +68,8 @@ public class DsfinvkParser {
         Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
         List<?> objects = parseTable(indexXmlFile, table.getName(), clazz);
         for (Object object : objects) {
-          Set<ConstraintViolation<Object>> violations = validator.validate(object, StrictGroup.class, Default.class);
+          //Set<ConstraintViolation<Object>> violations = validator.validate(object, StrictGroup.class, Default.class);
+          Set<ConstraintViolation<Object>> violations = validator.validate(object, Default.class);
           if (violations.isEmpty()) {
             continue;
           }
@@ -84,8 +84,12 @@ public class DsfinvkParser {
 
   }
 
-  private static <T> List<T> parseTable(File indexXml, String tableName, Class<T> clazz) throws ParsingException {
+  public static <T> List<T> parseTable(File indexXml, String tableName, Class<T> clazz) throws ParsingException {
     return GDPDU_DATA_PARSER.parseTable(indexXml, tableName, clazz);
+  }
+
+  public static Class<?> getClassForFilename(String fileName) {
+    return TABLE_MAP.get(fileName);
   }
 
   static {
