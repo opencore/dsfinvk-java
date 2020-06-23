@@ -7,20 +7,21 @@ import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Size;
 
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 public abstract class BaseModel {
 
   @NotBlank
   @Size(max = 50)
-  @Column("Z_KASSE_ID")
+  @Column(value = "Z_KASSE_ID", type = DataType.AlphaNumeric)
   private String zKasseId;
 
   @NotNull
   @PastOrPresent
-  @Column("Z_ERSTELLUNG")
+  @Column(value = "Z_ERSTELLUNG", type = DataType.AlphaNumeric)
   private LocalDateTime zErstellung;
 
-  @Column("Z_NR")
+  @Column(value = "Z_NR", type = DataType.Numeric)
   private int zNr;
 
   /**

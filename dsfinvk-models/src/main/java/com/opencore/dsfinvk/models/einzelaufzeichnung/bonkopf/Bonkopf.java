@@ -13,6 +13,7 @@ import com.opencore.dsfinvk.util.StrictGroup;
 import com.opencore.dsfinvk.util.ValidIso3166Alpha3Country;
 import com.opencore.dsfinvk.util.ValidVatId;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 /**
  * Da es sich im Bonkopf im Regelfall nur um die kumulierten Zahlen aus den einzelnen Bonpositionen handelt, ist die o. b. Aufgliederung der einzelnen Zahlen des Bonkopfes auf der Positionsebene erforderlich.
@@ -39,85 +40,85 @@ public class Bonkopf extends BaseBon {
   public static final String FILENAME = "transactions.csv";
 
   @NotNull
-  @Column("BON_NR")
+  @Column(value = "BON_NR", type = DataType.Numeric)
   private Long bonNr;
 
   @NotNull
-  @Column("BON_TYP")
+  @Column(value = "BON_TYP", type = DataType.AlphaNumeric)
   private BonTyp bonTyp;
 
   // TODO: Braucht Validator falls bonTyp = AVSonstige
   @Size(max = 60)
-  @Column("BON_NAME")
+  @Column(value = "BON_NAME", type = DataType.AlphaNumeric)
   private String bonName;
 
   @Size(max = 50)
-  @Column("TERMINAL_ID")
+  @Column(value = "TERMINAL_ID", type = DataType.AlphaNumeric)
   private String terminalId;
 
-  @Column("BON_STORNO")
+  @Column(value = "BON_STORNO", type = DataType.AlphaNumeric)
   private Boolean bonStorno;
 
   @NotNull
-  @Column("BON_START")
+  @Column(value = "BON_START", type = DataType.AlphaNumeric)
   private LocalDateTime bonStart;
 
   @NotNull
-  @Column("BON_ENDE")
+  @Column(value = "BON_ENDE", type = DataType.AlphaNumeric)
   private LocalDateTime bonEnde;
 
   @Size(max = 50)
   @NotBlank
-  @Column("BEDIENER_ID")
+  @Column(value = "BEDIENER_ID", type = DataType.AlphaNumeric)
   private String bedienerId;
 
   @Size(max = 50)
-  @Column("BEDIENER_NAME")
+  @Column(value = "BEDIENER_NAME", type = DataType.AlphaNumeric)
   private String bedienerName;
 
   @NotNull
   @Digits(integer = Integer.MAX_VALUE, fraction = 2)
-  @Column("UMS_BRUTTO")
+  @Column(value = "UMS_BRUTTO", type = DataType.Numeric)
   private BigDecimal umsBrutto;
 
   @NotBlank(groups = StrictGroup.class)
   @Size(max = 50)
-  @Column("KUNDE_NAME")
+  @Column(value = "KUNDE_NAME", type = DataType.AlphaNumeric)
   private String kundeName;
 
   @NotBlank(groups = StrictGroup.class)
   @Size(max = 50)
-  @Column("KUNDE_ID")
+  @Column(value = "KUNDE_ID", type = DataType.AlphaNumeric)
   private String kundeId;
 
   @NotBlank(groups = StrictGroup.class)
   @Size(max = 50)
-  @Column("KUNDE_TYP")
+  @Column(value = "KUNDE_TYP", type = DataType.AlphaNumeric)
   private String kundeTyp;
 
   @Size(max = 60)
-  @Column("KUNDE_STRASSE")
+  @Column(value = "KUNDE_STRASSE", type = DataType.AlphaNumeric)
   private String kundeStrasse;
 
   @Size(max = 10)
-  @Column("KUNDE_PLZ")
+  @Column(value = "KUNDE_PLZ", type = DataType.AlphaNumeric)
   private String kundePlz;
 
   @Size(max = 62)
-  @Column("KUNDE_ORT")
+  @Column(value = "KUNDE_ORT", type = DataType.AlphaNumeric)
   private String kundeOrt;
 
   @Size(max = 3)
   @ValidIso3166Alpha3Country
-  @Column("KUNDE_LAND")
+  @Column(value = "KUNDE_LAND", type = DataType.AlphaNumeric)
   private String kundeLand;
 
   @ValidVatId
-  @Column("KUNDE_USTID")
+  @Column(value = "KUNDE_USTID", type = DataType.AlphaNumeric)
   private String kundeUstid;
 
   @Size(max = 255)
-  @Column("BON_NOTIZ")
+  @Column(value = "BON_NOTIZ", type = DataType.AlphaNumeric)
   private String bonNotiz;
 
   /**

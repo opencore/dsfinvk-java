@@ -5,6 +5,7 @@ import javax.validation.constraints.Size;
 
 import com.opencore.dsfinvk.models.einzelaufzeichnung.BaseBon;
  import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 /**
  * Der Abrechnungskreis ist eine variable Einheit, mit der ein Beleg einem bestimmten Kriterium (Tisch, Abteilung etc.) zugeordnet werden kann.
@@ -15,7 +16,7 @@ public class BonkopfAbrKreis extends BaseBon {
   public static final String FILENAME = "allocation_groups.csv";
 
   @Size(max = 50)
-  @Column("ABRECHNUNGSKREIS")
+  @Column(value = "ABRECHNUNGSKREIS", type = DataType.AlphaNumeric)
   private String abrechnungskreis;
 
   /**

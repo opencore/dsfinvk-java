@@ -10,6 +10,7 @@ import com.opencore.dsfinvk.util.ValidIso3166Alpha3Country;
 import com.opencore.dsfinvk.util.ValidStammAgenturen;
 import com.opencore.dsfinvk.util.ValidVatId;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 /**
  * Werden Beträge "für Rechnung Dritter" erfasst (durchlaufende Posten), ist der Dritte verantwortlich für die korrekte Erfassung der Umsatzsteuer (z. B. Shop-in-Shop, wobei es unabhängige Unternehmer sein müssen).
@@ -25,42 +26,42 @@ public class StammAgenturen extends BaseModel {
 
   public static final String FILENAME = "pa.csv";
 
-  @Column("AGENTUR_ID")
+  @Column(value = "AGENTUR_ID", type = DataType.Numeric)
   private long agenturId;
 
   @NotBlank(groups = StrictGroup.class)
   @Size(max = 60)
-  @Column("AGENTUR_NAME")
+  @Column(value = "AGENTUR_NAME", type = DataType.AlphaNumeric)
   private String agenturName;
 
   @Size(max = 60)
   @NotBlank(groups = StrictGroup.class)
-  @Column("AGENTUR_STRASSE")
+  @Column(value = "AGENTUR_STRASSE", type = DataType.AlphaNumeric)
   private String agenturStrasse;
 
   @Size(max = 10)
   @NotBlank(groups = StrictGroup.class)
-  @Column("AGENTUR_PLZ")
+  @Column(value = "AGENTUR_PLZ", type = DataType.AlphaNumeric)
   private String agenturPlz;
 
   @Size(max = 62)
   @NotBlank(groups = StrictGroup.class)
-  @Column("AGENTUR_ORT")
+  @Column(value = "AGENTUR_ORT", type = DataType.AlphaNumeric)
   private String agenturOrt;
 
   @Size(max = 3)
   @NotBlank(groups = StrictGroup.class)
   @ValidIso3166Alpha3Country
-  @Column("AGENTUR_LAND")
+  @Column(value = "AGENTUR_LAND", type = DataType.AlphaNumeric)
   private String agenturLand;
 
   @Size(max = 20)
-  @Column("AGENTUR_STNR")
+  @Column(value = "AGENTUR_STNR", type = DataType.AlphaNumeric)
   private String agenturStnr;
 
   @Size(max = 15)
   @ValidVatId
-  @Column("AGENTUR_USTID")
+  @Column(value = "AGENTUR_USTID", type = DataType.AlphaNumeric)
   private String agenturUstid;
 
   /**

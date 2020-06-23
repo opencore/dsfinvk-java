@@ -14,6 +14,7 @@ import com.opencore.dsfinvk.util.ValidIso3166Alpha3Country;
 import com.opencore.dsfinvk.util.ValidStammAbschluss;
 import com.opencore.dsfinvk.util.ValidVatId;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 /**
  * Daten des Kassenabschlusses, dazu gehören Datum, Uhrzeit und Start- sowie End-ID.
@@ -27,63 +28,63 @@ public class StammAbschluss extends BaseModel {
   public static final String FILENAME = "cashpointclosing.csv";
 
   @PastOrPresent
-  @Column("Z_BUCHUNGSTAG")
+  @Column(value = "Z_BUCHUNGSTAG", type = DataType.AlphaNumeric)
   private LocalDate zBuchungstag;
 
   @Pattern(regexp = "2\\.[0,1]")
   @Size(max = 10)
   @NotBlank
-  @Column("TAXONOMIE_VERSION")
+  @Column(value = "TAXONOMIE_VERSION", type = DataType.AlphaNumeric)
   private String taxonomieVersion;
 
   @Size(max = 40)
   @NotBlank
-  @Column("Z_START_ID")
+  @Column(value = "Z_START_ID", type = DataType.AlphaNumeric)
   private String zStartId;
 
   @Size(max = 40)
   @NotBlank
-  @Column("Z_ENDE_ID")
+  @Column(value = "Z_ENDE_ID", type = DataType.AlphaNumeric)
   private String zEndeId;
 
   @Size(max = 60)
   @NotBlank
-  @Column("NAME")
+  @Column(value = "NAME", type = DataType.AlphaNumeric)
   private String name;
 
   @Size(max = 60)
   @NotBlank
-  @Column("STRASSE")
+  @Column(value = "STRASSE", type = DataType.AlphaNumeric)
   private String strasse;
 
   @Size(max = 10)
   @NotBlank
-  @Column("PLZ")
+  @Column(value = "PLZ", type = DataType.AlphaNumeric)
   private String plz;
 
   @Size(max = 62)
   @NotBlank
-  @Column("ORT")
+  @Column(value = "ORT", type = DataType.AlphaNumeric)
   private String ort;
 
   @NotBlank
   @ValidIso3166Alpha3Country
-  @Column("LAND")
+  @Column(value = "LAND", type = DataType.AlphaNumeric)
   private String land;
 
-  @Column("STNR")
+  @Column(value = "STNR", type = DataType.AlphaNumeric)
   private String stnr;
 
   @ValidVatId
-  @Column("USTID")
+  @Column(value = "USTID", type = DataType.AlphaNumeric)
   private String ustid;
 
   @Digits(integer = Integer.MAX_VALUE, fraction = 2)
-  @Column("Z_SE_ZAHLUNGEN")
+  @Column(value = "Z_SE_ZAHLUNGEN", type = DataType.Numeric)
   private BigDecimal zSeZahlungen;
 
   @Digits(integer = Integer.MAX_VALUE, fraction = 2)
-  @Column("Z_SE_BARZAHLUNGEN")
+  @Column(value = "Z_SE_BARZAHLUNGEN", type = DataType.Numeric)
   private BigDecimal zSeBarzahlungen;
 
   /**

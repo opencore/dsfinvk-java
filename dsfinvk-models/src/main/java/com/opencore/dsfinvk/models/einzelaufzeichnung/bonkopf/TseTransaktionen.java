@@ -6,44 +6,45 @@ import javax.validation.constraints.NotNull;
 
 import com.opencore.dsfinvk.models.einzelaufzeichnung.BaseBon;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 public class TseTransaktionen extends BaseBon {
 
   public static final String FILENAME = "transactions_tse.csv";
 
   @NotNull
-  @Column("TSE_ID")
+  @Column(value = "TSE_ID", type = DataType.Numeric)
   private Long tseId;
 
   @NotNull
-  @Column("TSE_TANR")
+  @Column(value = "TSE_TANR", type = DataType.Numeric)
   private Long tseTanr;
 
   @NotNull
-  @Column("TSE_TA_START")
+  @Column(value = "TSE_TA_START", type = DataType.AlphaNumeric)
   private LocalDateTime tseTaStart;
 
   @NotNull
-  @Column("TSE_TA_ENDE")
+  @Column(value = "TSE_TA_ENDE", type = DataType.AlphaNumeric)
   private LocalDateTime tseTaEnde;
 
   // TODO: enum
   @NotNull
-  @Column("TSE_TA_VORGANGSART")
+  @Column(value = "TSE_TA_VORGANGSART", type = DataType.AlphaNumeric)
   private String tseTaVorgangsart;
 
   @NotNull
-  @Column("TSE_TA_SIGZ")
+  @Column(value = "TSE_TA_SIGZ", type = DataType.Numeric)
   private Long tseTaSigz;
 
   @NotNull
-  @Column("TSE_TA_SIG")
+  @Column(value = "TSE_TA_SIG", type = DataType.Numeric)
   private String tseTaSig;
 
-  @Column("TSE_TA_FEHLER")
+  @Column(value = "TSE_TA_FEHLER", type = DataType.AlphaNumeric)
   private String tseTaFehler;
 
-  @Column("TSE_VORGANGSDATEN")
+  @Column(value = "TSE_VORGANGSDATEN", type = DataType.AlphaNumeric)
   private String tseVorgangsdaten;
 
   public Long getTseId() {

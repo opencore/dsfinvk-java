@@ -8,6 +8,7 @@ import javax.validation.constraints.Positive;
 
 import com.opencore.dsfinvk.util.ValidUstSchluessel;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 /**
  * In dieser Tabelle werden Detailangaben zur Entstehung des Preises abgelegt, z. B. spezielle Kunden-Rabatte oder auch Aufschläge.
@@ -15,21 +16,26 @@ import com.opencore.gdpdu.index.annotations.Column;
 public class BonposPreisfindung extends BaseBonpos {
 
   public static final String FILENAME = "itemamounts.csv";
-  @Column("TYP")
+
+  @Column(value = "TYP", type = DataType.AlphaNumeric)
   private Typ typ;
+
   @Positive
   @NotNull // TODO: This does not seem to work but it's still caught by the @Positive annotation
   @ValidUstSchluessel
-  @Column("UST_SCHLUESSEL")
+  @Column(value = "UST_SCHLUESSEL", type = DataType.Numeric)
   private Long ustSchluessel;
+
   @Digits(integer = Integer.MAX_VALUE, fraction = 5)
-  @Column("PF_BRUTTO")
+  @Column(value = "PF_BRUTTO", type = DataType.Numeric)
   private BigDecimal pfBrutto;
+
   @Digits(integer = Integer.MAX_VALUE, fraction = 5)
-  @Column("PF_NETTO")
+  @Column(value = "PF_NETTO", type = DataType.Numeric)
   private BigDecimal pfNetto;
+
   @Digits(integer = Integer.MAX_VALUE, fraction = 5)
-  @Column("PF_UST")
+  @Column(value = "PF_UST", type = DataType.Numeric)
   private BigDecimal pfUst;
 
   public Typ getTyp() {

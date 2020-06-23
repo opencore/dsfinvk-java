@@ -8,6 +8,7 @@ import javax.validation.constraints.NotNull;
 import com.opencore.dsfinvk.models.einzelaufzeichnung.BaseBon;
 import com.opencore.dsfinvk.util.ValidVatId;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 /**
  * Da es mehrere USt-Sätze pro Bonkopf geben kann, sind diese in einer Detail-Tabelle aufgeführt.
@@ -19,22 +20,22 @@ public class BonkopfUst extends BaseBon {
 
   @NotNull
   @ValidVatId
-  @Column("UST_SCHLUESSEL")
+  @Column(value = "UST_SCHLUESSEL", type = DataType.Numeric)
   private String ustSchluessel;
 
   @NotNull
   @Digits(integer = Integer.MAX_VALUE, fraction = 2)
-  @Column("BON_BRUTTO")
+  @Column(value = "BON_BRUTTO", type = DataType.Numeric)
   private BigDecimal bonBrutto;
 
   @NotNull
   @Digits(integer = Integer.MAX_VALUE, fraction = 2)
-  @Column("BON_NETTO")
+  @Column(value = "BON_NETTO", type = DataType.Numeric)
   private BigDecimal bonNetto;
 
   @NotNull
   @Digits(integer = Integer.MAX_VALUE, fraction = 2)
-  @Column("BON_UST")
+  @Column(value = "BON_UST", type = DataType.Numeric)
   private BigDecimal bonUst;
 
   /**

@@ -8,6 +8,7 @@ import com.opencore.dsfinvk.models.BaseModel;
 import com.opencore.dsfinvk.util.ValidIso3166Alpha3Country;
 import com.opencore.dsfinvk.util.ValidVatId;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 /**
  * Namen und Orte der einzelnen Betriebsstätten mit Kassen.
@@ -23,32 +24,32 @@ public class StammOrte extends BaseModel {
 
   @NotBlank
   @Size(max = 60)
-  @Column("LOC_NAME")
+  @Column(value = "LOC_NAME", type = DataType.AlphaNumeric)
   private String locName;
 
   @NotBlank
   @Size(max = 60)
-  @Column("LOC_STRASSE")
+  @Column(value = "LOC_STRASSE", type = DataType.AlphaNumeric)
   private String locStrasse;
 
   @NotBlank
   @Size(max = 10)
-  @Column("LOC_PLZ")
+  @Column(value = "LOC_PLZ", type = DataType.AlphaNumeric)
   private String locPlz;
 
   @NotBlank
   @Size(max = 62)
-  @Column("LOC_ORT")
+  @Column(value = "LOC_ORT", type = DataType.AlphaNumeric)
   private String locOrt;
 
   @NotBlank
   @ValidIso3166Alpha3Country
-  @Column("LOC_LAND")
+  @Column(value = "LOC_LAND", type = DataType.AlphaNumeric)
   private String locLand;
 
   @Size(max = 15)
   @ValidVatId
-  @Column("LOC_USTID")
+  @Column(value = "LOC_USTID", type = DataType.AlphaNumeric)
   private String locUstid;
 
   /**

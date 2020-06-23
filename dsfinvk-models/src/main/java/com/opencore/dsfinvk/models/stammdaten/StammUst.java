@@ -12,6 +12,7 @@ import com.opencore.dsfinvk.models.BaseModel;
 import com.opencore.dsfinvk.util.ValidStammUst;
 import com.opencore.dsfinvk.util.ValidUstSchluessel;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 /**
  * Stammdaten zur Umsatzsteuer (ID, USt-Satz, Beschreibung).
@@ -105,17 +106,17 @@ public class StammUst extends BaseModel {
   @Positive
   @NotNull // TODO: This does not seem to work but it's still caught by the @Positive annotation
   @ValidUstSchluessel
-  @Column("UST_SCHLUESSEL")
+  @Column(value = "UST_SCHLUESSEL", type = DataType.Numeric)
   private long ustSchluessel;
 
   @Digits(integer = Integer.MAX_VALUE, fraction = 2)
   @NotNull
-  @Column("UST_SATZ")
+  @Column(value = "UST_SATZ", type = DataType.Numeric)
   private BigDecimal ustSatz;
 
   @Size(max = 55)
   @NotBlank
-  @Column("UST_BESCHR")
+  @Column(value = "UST_BESCHR", type = DataType.AlphaNumeric)
   private String ustBeschr;
 
   public long getUstSchluessel() {

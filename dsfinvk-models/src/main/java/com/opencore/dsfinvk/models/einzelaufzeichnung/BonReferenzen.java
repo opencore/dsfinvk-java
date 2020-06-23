@@ -6,6 +6,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 /**
  * In dieser Datei können Referenzen auf Vorgänge innerhalb der DSFinV-K ebenso wie Verweise auf externe Systeme vorgenommen werden.
@@ -15,21 +16,28 @@ import com.opencore.gdpdu.index.annotations.Column;
 public class BonReferenzen extends BaseBon {
 
   public static final String FILENAME = "references.csv";
+
   @Size(max = 50)
-  @Column("POS_ZEILE")
+  @Column(value = "POS_ZEILE", type = DataType.AlphaNumeric)
   private String posZeile;
+
   @NotNull
-  @Column("REF_TYP")
+  @Column(value = "REF_TYP", type = DataType.AlphaNumeric)
   private RefTyp refTyp;
-  @Column("REF_NAME")
+
+  @Column(value = "REF_NAME", type = DataType.AlphaNumeric)
   private String refName;
-  @Column("REF_DATUM")
+
+  @Column(value = "REF_DATUM", type = DataType.AlphaNumeric)
   private LocalDateTime refDatum;
-  @Column("REF_Z_KASSE_ID")
+
+  @Column(value = "REF_Z_KASSE_ID", type = DataType.AlphaNumeric)
   private String refZKasseId;
-  @Column("REF_Z_NR")
+
+  @Column(value = "REF_Z_NR", type = DataType.Numeric)
   private Long refZNr;
-  @Column("REF_BON_ID")
+
+  @Column(value = "REF_BON_ID", type = DataType.AlphaNumeric)
   private String refBonId;
 
   /**

@@ -10,6 +10,7 @@ import javax.validation.constraints.Size;
 
 import com.opencore.dsfinvk.models.GvTyp;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 /**
  * Die Datei Bonpos enthält die einzelnen Positionen eines Vorgangs mit der Zuordnung des korrekten USt-Satzes, der Menge und der Art der gelieferten Gegenstände (§ 14 Abs. 4 UStG; § 22 Abs. 2 UStG i. V. m. § 63 Abs. 3 UStDV).
@@ -25,71 +26,71 @@ public class Bonpos extends BaseBonpos {
   public static final String FILENAME = "lines.csv";
 
   @Size(max = 50)
-  @Column("GUTSCHEIN_NR")
+  @Column(value = "GUTSCHEIN_NR", type = DataType.AlphaNumeric)
   private String gutscheinNr;
 
   @NotBlank
   @Size(max = 255)
-  @Column("ARTIKELTEXT")
+  @Column(value = "ARTIKELTEXT", type = DataType.AlphaNumeric)
   private String artikeltext;
 
   @Size(max = 50)
-  @Column("POS_TERMINAL_ID")
+  @Column(value = "POS_TERMINAL_ID", type = DataType.AlphaNumeric)
   private String posTerminalId;
 
   // Maximum size: 30 according to spec but we're using an enum here
   @NotNull
-  @Column("GV_TYP")
+  @Column(value = "GV_TYP", type = DataType.AlphaNumeric)
   private GvTyp gvTyp;
 
   @Size(max = 40)
-  @Column("GV_NAME")
+  @Column(value = "GV_NAME", type = DataType.AlphaNumeric)
   private String gvName;
 
-  @Column("INHAUS")
+  @Column(value = "INHAUS", type = DataType.AlphaNumeric)
   private boolean inhaus;
 
-  @Column("P_STORNO")
+  @Column(value = "P_STORNO", type = DataType.AlphaNumeric)
   private boolean pStorno;
 
   // TODO: In der Dokumentation steht nicht, dass dieses Feld positiv sein muss, ich nehme es nur an
   @PositiveOrZero
-  @Column("AGENTUR_ID")
+  @Column(value = "AGENTUR_ID", type = DataType.Numeric)
   private Long agenturId;
 
   @NotBlank
   @Size(max = 50)
-  @Column("ART_NR")
+  @Column(value = "ART_NR", type = DataType.AlphaNumeric)
   private String artNr;
 
   @Size(max = 50)
-  @Column("GTIN")
+  @Column(value = "GTIN", type = DataType.AlphaNumeric)
   private String gtin;
 
   @Size(max = 40)
-  @Column("WARENGR_ID")
+  @Column(value = "WARENGR_ID", type = DataType.AlphaNumeric)
   private String warengrId;
 
   @Size(max = 50)
-  @Column("WARENGR")
+  @Column(value = "WARENGR", type = DataType.AlphaNumeric)
   private String warengr;
 
   @NotNull
   @Digits(integer = Integer.MAX_VALUE, fraction = 3)
-  @Column("MENGE")
+  @Column(value = "MENGE", type = DataType.Numeric)
   private BigDecimal menge;
 
   @Digits(integer = Integer.MAX_VALUE, fraction = 3)
-  @Column("FAKTOR")
+  @Column(value = "FAKTOR", type = DataType.Numeric)
   private BigDecimal faktor;
 
   @Size(max = 50)
-  @Column("EINHEIT")
+  @Column(value = "EINHEIT", type = DataType.AlphaNumeric)
   private String einheit;
 
   @NotNull
   @Digits(integer = Integer.MAX_VALUE, fraction = 5)
-  @Column("STK_BR")
+  @Column(value = "STK_BR", type = DataType.Numeric)
   private BigDecimal stkBr;
 
   /**

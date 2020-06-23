@@ -9,6 +9,7 @@ import javax.validation.constraints.Size;
 import com.opencore.dsfinvk.models.BaseModel;
 import com.opencore.dsfinvk.models.ZahlartTyp;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 /**
  * Für jeden Zahlarttypen ("ZAHLART_TYP") werden (getrennt nach "ZAHLART_NAME") Summen gebildet ("ZAHLART_BETRAG"), die weiter in der Buchhaltung zu verarbeitenden Gesamtbeträge dargestellt.
@@ -18,16 +19,16 @@ public class ZZahlart extends BaseModel {
   public static final String FILENAME = "payment.csv";
 
   @NotNull
-  @Column("ZAHLART_TYP")
+  @Column(value = "ZAHLART_TYP", type = DataType.AlphaNumeric)
   private ZahlartTyp zahlartTyp;
 
   @Size(max = 60)
-  @Column("ZAHLART_NAME")
+  @Column(value = "ZAHLART_NAME", type = DataType.AlphaNumeric)
   private String zahlartName;
 
   @NotNull
   @Digits(integer = Integer.MAX_VALUE, fraction = 2)
-  @Column("Z_ZAHLART_BETRAG")
+  @Column(value = "Z_ZAHLART_BETRAG", type = DataType.Numeric)
   private BigDecimal zZahlartBetrag;
 
   /**

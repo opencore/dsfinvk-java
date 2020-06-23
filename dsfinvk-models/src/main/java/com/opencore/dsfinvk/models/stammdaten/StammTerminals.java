@@ -6,6 +6,7 @@ import javax.validation.constraints.Size;
 
 import com.opencore.dsfinvk.models.BaseModel;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 /**
  * Stammdaten der einzelnen Erfassungs-Terminals (sog. Slave-Kassen), über die nicht der Kassenabschluss erfolgt.
@@ -18,27 +19,27 @@ public class StammTerminals extends BaseModel {
 
   @Size(max = 50)
   @NotBlank
-  @Column("TERMINAL_ID")
+  @Column(value = "TERMINAL_ID", type = DataType.AlphaNumeric)
   private String terminalId;
 
   @Size(max = 50)
-  @Column("TERMINAL_BRAND")
+  @Column(value = "TERMINAL_BRAND", type = DataType.AlphaNumeric)
   private String terminalBrand;
 
   @Size(max = 50)
-  @Column("TERMINAL_MODELL")
+  @Column(value = "TERMINAL_MODELL", type = DataType.AlphaNumeric)
   private String terminalModell;
 
   @Size(max = 70)
-  @Column("TERMINAL_SERIENNR")
+  @Column(value = "TERMINAL_SERIENNR", type = DataType.AlphaNumeric)
   private String terminalSeriennr;
 
   @Size(max = 50)
-  @Column("TERMINAL_SW_BRAND")
+  @Column(value = "TERMINAL_SW_BRAND", type = DataType.AlphaNumeric)
   private String terminalSwBrand;
 
   @Size(max = 50)
-  @Column("TERMINAL_SW_VERSION")
+  @Column(value = "TERMINAL_SW_VERSION", type = DataType.AlphaNumeric)
   private String terminalSwVersion;
 
   /**

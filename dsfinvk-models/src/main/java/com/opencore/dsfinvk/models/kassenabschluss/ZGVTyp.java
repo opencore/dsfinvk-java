@@ -11,6 +11,7 @@ import com.opencore.dsfinvk.models.BaseModel;
 import com.opencore.dsfinvk.models.GvTyp;
 import com.opencore.dsfinvk.util.ValidUstSchluessel;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 /**
  * Für jeden Geschäftsvorfalltypen ("GV_Typ") werden (getrennt nach "GV_NAME" als Summen) die weiter zu verarbeitenden Gesamtbeträge dargestellt.
@@ -20,35 +21,35 @@ public class ZGVTyp extends BaseModel {
   public static final String FILENAME = "businesscases.csv";
 
   @NotNull
-  @Column("GV_TYP")
+  @Column(value = "GV_TYP", type = DataType.AlphaNumeric)
   private GvTyp gvTyp;
 
   @Size(max = 40)
-  @Column("GV_NAME")
+  @Column(value = "GV_NAME", type = DataType.AlphaNumeric)
   private String gvName;
 
-  @Column("AGENTUR_ID")
+  @Column(value = "AGENTUR_ID", type = DataType.Numeric)
   private Long agenturId;
 
   @Positive
   @NotNull // TODO: This does not seem to work but it's still caught by the @Positive annotation
   @ValidUstSchluessel
-  @Column("UST_SCHLUESSEL")
+  @Column(value = "UST_SCHLUESSEL", type = DataType.Numeric)
   private long ustSchluessel;
 
   @NotNull
   @Digits(integer = Integer.MAX_VALUE, fraction = 5)
-  @Column("Z_UMS_BRUTTO")
+  @Column(value = "Z_UMS_BRUTTO", type = DataType.Numeric)
   private BigDecimal zUmsBrutto;
 
   @NotNull
   @Digits(integer = Integer.MAX_VALUE, fraction = 5)
-  @Column("Z_UMS_NETTO")
+  @Column(value = "Z_UMS_NETTO", type = DataType.Numeric)
   private BigDecimal zUmsNetto;
 
   @NotNull
   @Digits(integer = Integer.MAX_VALUE, fraction = 5)
-  @Column("Z_UST")
+  @Column(value = "Z_UST", type = DataType.Numeric)
   private BigDecimal zUst;
 
   /**

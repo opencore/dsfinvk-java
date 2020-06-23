@@ -5,12 +5,13 @@ import javax.validation.constraints.Size;
 
 import com.opencore.dsfinvk.models.einzelaufzeichnung.BaseBon;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 public abstract class BaseBonpos extends BaseBon {
 
   @NotBlank
   @Size(max = 50)
-  @Column("POS_ZEILE")
+  @Column(value = "POS_ZEILE", type = DataType.AlphaNumeric)
   private String posZeile;
 
   /**

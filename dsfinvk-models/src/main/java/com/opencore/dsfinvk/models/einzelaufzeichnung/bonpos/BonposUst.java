@@ -8,6 +8,7 @@ import javax.validation.constraints.Positive;
 
 import com.opencore.dsfinvk.util.ValidUstSchluessel;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 // TODO: Validator, dass entweder brutto oder (netto + ust) gesetzt ist
 
@@ -22,19 +23,19 @@ public class BonposUst extends BaseBonpos {
   @Positive
   @NotNull // TODO: This does not seem to work but it's still caught by the @Positive annotation
   @ValidUstSchluessel
-  @Column("UST_SCHLUESSEL")
+  @Column(value = "UST_SCHLUESSEL", type = DataType.Numeric)
   private Long ustSchluessel;
 
   @Digits(integer = Integer.MAX_VALUE, fraction = 5)
-  @Column("POS_BRUTTO")
+  @Column(value = "POS_BRUTTO", type = DataType.Numeric)
   private BigDecimal posBrutto;
 
   @Digits(integer = Integer.MAX_VALUE, fraction = 5)
-  @Column("POS_NETTO")
+  @Column(value = "POS_NETTO", type = DataType.Numeric)
   private BigDecimal posNetto;
 
   @Digits(integer = Integer.MAX_VALUE, fraction = 5)
-  @Column("POS_UST")
+  @Column(value = "POS_UST", type = DataType.Numeric)
   private BigDecimal posUst;
 
   /**

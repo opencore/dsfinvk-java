@@ -10,6 +10,7 @@ import javax.validation.constraints.Size;
 
 import com.opencore.dsfinvk.util.ValidUstSchluessel;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 public class BonposZusatzinfo extends BaseBonpos {
 
@@ -17,39 +18,39 @@ public class BonposZusatzinfo extends BaseBonpos {
 
   @NotBlank
   @Size(max = 50)
-  @Column("ZI_ART_NR")
+  @Column(value = "ZI_ART_NR", type = DataType.AlphaNumeric)
   private String ziArtNr;
 
   @Size(max = 50)
-  @Column("ZI_GTIN")
+  @Column(value = "ZI_GTIN", type = DataType.AlphaNumeric)
   private String ziGtin;
 
   @Size(max = 60)
-  @Column("ZI_NAME")
+  @Column(value = "ZI_NAME", type = DataType.AlphaNumeric)
   private String ziName;
 
   @Size(max = 40)
-  @Column("ZI_WARENGR_ID")
+  @Column(value = "ZI_WARENGR_ID", type = DataType.AlphaNumeric)
   private String ziWarengrId;
 
   @Size(max = 50)
-  @Column("ZI_WARENGR")
+  @Column(value = "ZI_WARENGR", type = DataType.AlphaNumeric)
   private String ziWarengr;
 
   @NotNull
   @Digits(integer = Integer.MAX_VALUE, fraction = 3)
-  @Column("ZI_MENGE")
+  @Column(value = "ZI_MENGE", type = DataType.Numeric)
   private BigDecimal ziMenge;
 
   @Digits(integer = Integer.MAX_VALUE, fraction = 3)
-  @Column("ZI_FAKTOR")
+  @Column(value = "ZI_FAKTOR", type = DataType.Numeric)
   private BigDecimal ziFaktor;
 
   /**
    * Maßeinheit des Artikels auf SubItem-Ebene.
    */
   @Size(max = 50)
-  @Column("ZI_EINHEIT")
+  @Column(value = "ZI_EINHEIT", type = DataType.AlphaNumeric)
   private String ziEinheit;
 
   /**
@@ -58,28 +59,28 @@ public class BonposZusatzinfo extends BaseBonpos {
   @Positive
   @NotNull // TODO: This does not seem to work but it's still caught by the @Positive annotation
   @ValidUstSchluessel
-  @Column("ZI_UST_SCHLUESSEL")
+  @Column(value = "ZI_UST_SCHLUESSEL", type = DataType.Numeric)
   private Long ustSchluessel;
 
   /**
    * Basispreis Brutto
    */
   @Digits(integer = Integer.MAX_VALUE, fraction = 5)
-  @Column("ZI_BASISPREIS_BRUTTO")
+  @Column(value = "ZI_BASISPREIS_BRUTTO", type = DataType.Numeric)
   private BigDecimal ziBasispreisBrutto;
 
   /**
    * Basispreis Netto
    */
   @Digits(integer = Integer.MAX_VALUE, fraction = 5)
-  @Column("ZI_BASISPREIS_NETTO")
+  @Column(value = "ZI_BASISPREIS_NETTO", type = DataType.Numeric)
   private BigDecimal ziBasispreisNetto;
 
   /**
    * USt-Betrag auf Basispreis
    */
   @Digits(integer = Integer.MAX_VALUE, fraction = 5)
-  @Column("ZI_BASISPREIS_UST")
+  @Column(value = "ZI_BASISPREIS_UST", type = DataType.Numeric)
   private BigDecimal ziBasispreisUst;
 
   public String getZiArtNr() {

@@ -10,6 +10,7 @@ import javax.validation.constraints.Size;
 import com.opencore.dsfinvk.models.BaseModel;
 import com.opencore.dsfinvk.util.ValidIso4217Currency;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 /**
  * Für jede Währung ("ZAHLART_WAEH") wird die Summe in dieser Datei dargestellt.
@@ -23,12 +24,12 @@ public class ZWaehrungen extends BaseModel {
   @NotBlank
   @Size(max = 3)
   @ValidIso4217Currency
-  @Column("ZAHLART_WAEH")
+  @Column(value = "ZAHLART_WAEH", type = DataType.AlphaNumeric)
   private String zahlartWaeh;
 
   @NotNull
   @Digits(integer = Integer.MAX_VALUE, fraction = 2)
-  @Column("ZAHLART_BETRAG_WAEH")
+  @Column(value = "ZAHLART_BETRAG_WAEH", type = DataType.Numeric)
   private BigDecimal zahlartBetragWaeh;
 
   /**

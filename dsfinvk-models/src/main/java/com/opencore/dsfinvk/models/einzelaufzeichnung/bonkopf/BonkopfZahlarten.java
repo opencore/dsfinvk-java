@@ -11,32 +11,33 @@ import com.opencore.dsfinvk.models.ZahlartTyp;
 import com.opencore.dsfinvk.models.einzelaufzeichnung.BaseBon;
 import com.opencore.dsfinvk.util.ValidIso4217Currency;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 public class BonkopfZahlarten extends BaseBon {
 
   public static final String FILENAME = "datapayment.csv";
 
   @NotNull
-  @Column("ZAHLART_TYP")
+  @Column(value = "ZAHLART_TYP", type = DataType.AlphaNumeric)
   private ZahlartTyp zahlartTyp;
 
-  @Column("ZAHLART_NAME")
+  @Column(value = "ZAHLART_NAME", type = DataType.AlphaNumeric)
   private String zahlartName;
 
   // TODO: Das sollte eigentlich eher direkt ein Currency Feld sein
   @NotBlank
   @Size(max = 3)
   @ValidIso4217Currency
-  @Column("ZAHLWAEH_CODE")
+  @Column(value = "ZAHLWAEH_CODE", type = DataType.AlphaNumeric)
   private String zahlwaehCode;
 
   @Digits(integer = Integer.MAX_VALUE, fraction = 2)
-  @Column("ZAHLWAEH_BETRAG")
+  @Column(value = "ZAHLWAEH_BETRAG", type = DataType.Numeric)
   private BigDecimal zahlwaehBetrag;
 
   @NotNull
   @Digits(integer = Integer.MAX_VALUE, fraction = 2)
-  @Column("BASISWAEH_BETRAG")
+  @Column(value = "BASISWAEH_BETRAG", type = DataType.Numeric)
   private BigDecimal basiswaehBetrag;
 
   public ZahlartTyp getZahlartTyp() {

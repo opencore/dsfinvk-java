@@ -5,6 +5,7 @@ import javax.validation.constraints.Size;
 
 import com.opencore.dsfinvk.models.BaseModel;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 /**
  * This is a base class for all files of the "Einzelaufzeichnungsmodul"
@@ -13,7 +14,7 @@ public abstract class BaseBon extends BaseModel {
 
   @NotBlank
   @Size(max = 40)
-  @Column("BON_ID")
+  @Column(value = "BON_ID", type = DataType.AlphaNumeric)
   private String bonId;
 
   /**

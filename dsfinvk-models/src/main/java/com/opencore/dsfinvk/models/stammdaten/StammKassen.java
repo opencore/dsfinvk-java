@@ -7,6 +7,7 @@ import javax.validation.constraints.Size;
 import com.opencore.dsfinvk.models.BaseModel;
 import com.opencore.dsfinvk.util.ValidIso4217Currency;
 import com.opencore.gdpdu.index.annotations.Column;
+import com.opencore.gdpdu.index.models.DataType;
 
 /**
  * Stammdaten der einzelnen eingesetzten Kassen.
@@ -18,34 +19,34 @@ public class StammKassen extends BaseModel {
   public static final String FILENAME = "cashregister.csv";
 
   @Size(max = 50)
-  @Column("KASSE_BRAND")
+  @Column(value = "KASSE_BRAND", type = DataType.AlphaNumeric)
   private String kasseBrand;
 
   @Size(max = 50)
-  @Column("KASSE_MODELL")
+  @Column(value = "KASSE_MODELL", type = DataType.AlphaNumeric)
   private String kasseModell;
 
   @NotBlank
   @Size(max = 70)
-  @Column("KASSE_SERIENNR")
+  @Column(value = "KASSE_SERIENNR", type = DataType.AlphaNumeric)
   private String kasseSeriennr;
 
   @Size(max = 50)
-  @Column("KASSE_SW_BRAND")
+  @Column(value = "KASSE_SW_BRAND", type = DataType.AlphaNumeric)
   private String kasseSwBrand;
 
   @Size(max = 50)
-  @Column("KASSE_SW_VERSION")
+  @Column(value = "KASSE_SW_VERSION", type = DataType.AlphaNumeric)
   private String kasseSwVersion;
 
   // TODO: Das sollte eigentlich eher direkt ein Currency Feld sein
   @NotBlank
   @Size(max = 3)
   @ValidIso4217Currency
-  @Column("KASSE_BASISWAEH_CODE")
+  @Column(value = "KASSE_BASISWAEH_CODE", type = DataType.AlphaNumeric)
   private String kasseBasiswaehCode;
 
-  @Column("KEINE_UST_ZUORDNUNG")
+  @Column(value = "KEINE_UST_ZUORDNUNG", type = DataType.AlphaNumeric)
   private Boolean keineUstZuordnung;
 
   public String getKasseBrand() {
