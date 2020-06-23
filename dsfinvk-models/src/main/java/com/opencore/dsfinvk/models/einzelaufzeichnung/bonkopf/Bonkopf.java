@@ -9,6 +9,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.opencore.dsfinvk.models.einzelaufzeichnung.BaseBon;
+import com.opencore.dsfinvk.util.StrictGroup;
 import com.opencore.dsfinvk.util.ValidIso3166Alpha3Country;
 import com.opencore.dsfinvk.util.ValidVatId;
 import com.opencore.gdpdu.index.annotations.Column;
@@ -79,17 +80,17 @@ public class Bonkopf extends BaseBon {
   @Column("UMS_BRUTTO")
   private BigDecimal umsBrutto;
 
-  @NotBlank
+  @NotBlank(groups = StrictGroup.class)
   @Size(max = 50)
   @Column("KUNDE_NAME")
   private String kundeName;
 
-  @NotBlank
+  @NotBlank(groups = StrictGroup.class)
   @Size(max = 50)
   @Column("KUNDE_ID")
   private String kundeId;
 
-  @NotBlank
+  @NotBlank(groups = StrictGroup.class)
   @Size(max = 50)
   @Column("KUNDE_TYP")
   private String kundeTyp;
