@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.concurrent.Callable;
 
 import com.opencore.dsfinvk.parser.DsfinvkParser;
-import com.opencore.gdpdu.data.ParsingException;
+import com.opencore.gdpdu.common.exceptions.ParsingException;
 import picocli.CommandLine;
 
 @CommandLine.Command(name = "validation", description = "This command can be used to validate a full DSFinV-K export")
@@ -15,7 +15,7 @@ public class ValidationCommand implements Callable<Integer> {
   private File indexXml;
 
   @Override
-  public Integer call() throws Exception {
+  public Integer call() {
     try {
       DsfinvkParser.parseAndValidate(indexXml);
     } catch (IOException | ParsingException e) {

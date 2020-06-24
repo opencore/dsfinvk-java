@@ -40,6 +40,11 @@
     </dependency>
     <dependency>
       <groupId>com.opencore</groupId>
+      <artifactId>gdpdu-common</artifactId>
+      <version>${gdpdu.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.opencore</groupId>
       <artifactId>gdpdu-data-parser</artifactId>
       <version>${gdpdu.version}</version>
     </dependency>

@@ -31,8 +31,8 @@ import com.opencore.dsfinvk.models.stammdaten.StammKassen;
 import com.opencore.dsfinvk.models.stammdaten.StammOrte;
 import com.opencore.dsfinvk.models.stammdaten.StammTerminals;
 import com.opencore.dsfinvk.models.stammdaten.StammUst;
+import com.opencore.gdpdu.common.exceptions.ParsingException;
 import com.opencore.gdpdu.data.GdpduDataParser;
-import com.opencore.gdpdu.data.ParsingException;
 import com.opencore.gdpdu.index.GdpduIndexParser;
 import com.opencore.gdpdu.index.models.DataSet;
 import com.opencore.gdpdu.index.models.Media;
@@ -66,9 +66,17 @@ public class DsfinvkParser {
         }
 
         Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
-        List<?> objects = parseTable(indexXmlFile, table.getName(), clazz);
+
+        // TODO: Make it configurable whether to abort on error
+        List<?> objects;
+        try {
+          objects = parseTable(indexXmlFile, table.getName(), clazz);
+        } catch (ParsingException e) {
+          LOG.error("Error parsing [{}] into [{}], skipping  table", table.getName(), clazz.getName(), e);
+          continue;
+        }
         for (Object object : objects) {
-          //Set<ConstraintViolation<Object>> violations = validator.validate(object, StrictGroup.class, Default.class);
+          // TODO: Make the groups configurable
           Set<ConstraintViolation<Object>> violations = validator.validate(object, Default.class);
           if (violations.isEmpty()) {
             continue;
