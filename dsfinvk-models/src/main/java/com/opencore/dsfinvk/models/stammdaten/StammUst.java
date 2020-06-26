@@ -35,13 +35,13 @@ import com.opencore.gdpdu.index.models.DataType;
  *   </tr>
  *   <tr>
  *     <td>1</td>
- *     <td>19,00%</td>
- *     <td>Allgemeiner Steuersatz</td>
+ *     <td></td>
+ *     <td>Zum Zeitpunkt der Erfassung des Geschäftsvorfalls geltender allgemeiner Steuersatz (§ 12 Abs. 1 UStG)</td>
  *   </tr>
  *   <tr>
  *     <td>2</td>
- *     <td>7,00%</td>
- *     <td>Ermäßigter Steuersatz</td>
+ *     <td></td>
+ *     <td>Zum Zeitpunkt der Erfassung des Geschäftsvorfalls geltender ermäßigter Steuersatz (§ 12 Abs. 2 UStG)</td>
  *   </tr>
  *   <tr>
  *     <td>3</td>
@@ -69,7 +69,27 @@ import com.opencore.gdpdu.index.models.DataType;
  *     <td>UmsatzsteuerNichtErmittelbar</td>
  *   </tr>
  *   <tr>
- *     <td>8-999</td>
+ *     <td>11</td>
+ *     <td>19,00%</td>
+ *     <td>Historischer allgemeiner Steuersatz (§ 12 Abs. 1 UStG)</td>
+ *   </tr>
+ *   <tr>
+ *     <td>12</td>
+ *     <td>7,00%</td>
+ *     <td>Historischer ermäßigter Steuersatz (§ 12 Abs. 2 UStG)</td>
+ *   </tr>
+ *   <tr>
+ *     <td>21</td>
+ *     <td>16,00%</td>
+ *     <td>Historischer allgemeiner Steuersatz (§ 12 Abs. 1 UStG)</td>
+ *   </tr>
+ *   <tr>
+ *     <td>22</td>
+ *     <td>5,00%</td>
+ *     <td>Historischer ermäßigter Steuersatz (§ 12 Abs. 2 UStG)</td>
+ *   </tr>
+ *   <tr>
+ *     <td>bis 999</td>
  *     <td></td>
  *     <td>reserviert für Änderungen DSFinV-K</td>
  *   </tr>
@@ -110,7 +130,7 @@ public class StammUst extends BaseModel {
   private long ustSchluessel;
 
   @Digits(integer = Integer.MAX_VALUE, fraction = 2)
-  @NotNull
+  //@NotNull -> TODO This is now optional as of DSFinV-K
   @Column(value = "UST_SATZ", type = DataType.Numeric)
   private BigDecimal ustSatz;
 

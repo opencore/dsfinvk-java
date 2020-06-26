@@ -7,6 +7,8 @@ This is a library containing classes to work with the https://www.bzst.de/DE/Unt
 
 WARNING: This is in the very early stages.
 
+NOTE: This supports DSFinV-K 2.1 and 2.2
+
 == Terminology
 
 DFKA :: _Deutscher Fachverband für Kassen- und Abrechnungssystemtechnik im bargeld- und bargeldlosen Zahlungsverkehr e.V._
@@ -35,5 +37,3 @@ They were replaced by  the _GDPdU_ in 2015.
 * https://www.bzst.de/DE/Unternehmen/Aussenpruefungen/DigitaleSchnittstelleFinV/digitaleschnittstellefinv_node.html[DSFinV-K]
 * https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr03153/index_htm.html[BSI TR 03153]
 * https://www.omg.org/cgi-bin/doc?retail/2017-07-13[POSlog]
-
-

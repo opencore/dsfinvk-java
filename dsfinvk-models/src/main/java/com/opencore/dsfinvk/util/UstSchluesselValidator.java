@@ -15,6 +15,14 @@ public class UstSchluesselValidator implements ConstraintValidator<ValidUstSchlu
       return true;
     }
 
+    if (obj >= 11 && obj <= 12) {
+      return true;
+    }
+
+    if (obj >= 21 && obj <= 22) {
+      return true;
+    }
+
     if (obj >= 1000) {
       return true;
     }
