@@ -14,7 +14,7 @@
   <name>DSFinV-K CLI</name>
 
   <properties>
-    <picocli.version>4.3.2</picocli.version>
+    <picocli.version>4.4.0</picocli.version>
   </properties>
 
   <dependencies>
