@@ -1,11 +1,11 @@
 = DSFinV-K Java
 
+WARNING: This is in the very early stages and mostly unmaintained. If you're interested in taking this over this project let me know.
+
 image:https://img.shields.io/github/workflow/status/opencore/dsfinvk-java/Maven Build[GitHub Workflow Status]
 image:https://img.shields.io/github/license/opencore/dsfinvk-java[GitHub]
 
 This is a library containing classes to work with the https://www.bzst.de/DE/Unternehmen/Aussenpruefungen/DigitaleSchnittstelleFinV/digitaleschnittstellefinv_node.html[DSFinV-K].
-
-WARNING: This is in the very early stages.
 
 NOTE: This supports DSFinV-K 2.1 and 2.2
 
