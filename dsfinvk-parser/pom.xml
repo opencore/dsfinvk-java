@@ -16,7 +16,7 @@
   <name>DSFinV-K Parser</name>
 
   <properties>
-    <hibernate-validator.version>6.1.5.Final</hibernate-validator.version>
+    <hibernate-validator.version>7.0.1.Final</hibernate-validator.version>
     <jakarta.el.version>3.0.3</jakarta.el.version>
     <logback-classic.version>1.2.3</logback-classic.version>
     <slf4j-api.version>1.7.30</slf4j-api.version>
