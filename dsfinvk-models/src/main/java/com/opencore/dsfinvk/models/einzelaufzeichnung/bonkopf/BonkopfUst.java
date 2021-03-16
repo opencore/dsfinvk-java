@@ -19,7 +19,7 @@ public class BonkopfUst extends BaseBon {
   public static final String FILENAME = "transactions_vat.csv";
 
   @NotNull
-  @ValidVatId
+ // @ValidVatId
   @Column(value = "UST_SCHLUESSEL", type = DataType.Numeric)
   private String ustSchluessel;
 

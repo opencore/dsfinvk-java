@@ -34,11 +34,11 @@ public class TseTransaktionen extends BaseBon {
   private String tseTaVorgangsart;
 
   @NotNull
-  @Column(value = "TSE_TA_SIGZ", type = DataType.Numeric)
+  @Column(value = "TSE_TA_SIGZ", type = DataType.AlphaNumeric)
   private Long tseTaSigz;
 
   @NotNull
-  @Column(value = "TSE_TA_SIG", type = DataType.Numeric)
+  @Column(value = "TSE_TA_SIG", type = DataType.AlphaNumeric)
   private String tseTaSig;
 
   @Column(value = "TSE_TA_FEHLER", type = DataType.AlphaNumeric)
