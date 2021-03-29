@@ -1,7 +1,7 @@
 module com.opencore.dsfinvk.models {
 
   requires java.validation;
-  requires com.opencore.gdpdu.models;
+  requires gdpdu.models;
 
   exports com.opencore.dsfinvk.models.stammdaten;
   exports com.opencore.dsfinvk.models.einzelaufzeichnung;

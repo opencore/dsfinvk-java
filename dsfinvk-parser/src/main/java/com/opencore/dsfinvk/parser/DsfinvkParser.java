@@ -25,12 +25,7 @@ import com.opencore.dsfinvk.models.einzelaufzeichnung.bonpos.BonposZusatzinfo;
 import com.opencore.dsfinvk.models.kassenabschluss.ZGVTyp;
 import com.opencore.dsfinvk.models.kassenabschluss.ZWaehrungen;
 import com.opencore.dsfinvk.models.kassenabschluss.ZZahlart;
-import com.opencore.dsfinvk.models.stammdaten.StammAbschluss;
-import com.opencore.dsfinvk.models.stammdaten.StammAgenturen;
-import com.opencore.dsfinvk.models.stammdaten.StammKassen;
-import com.opencore.dsfinvk.models.stammdaten.StammOrte;
-import com.opencore.dsfinvk.models.stammdaten.StammTerminals;
-import com.opencore.dsfinvk.models.stammdaten.StammUst;
+import com.opencore.dsfinvk.models.stammdaten.*;
 import com.opencore.gdpdu.common.exceptions.ParsingException;
 import com.opencore.gdpdu.data.GdpduDataParser;
 import com.opencore.gdpdu.index.GdpduIndexParser;
@@ -45,7 +40,6 @@ public class DsfinvkParser {
   private static final Logger LOG = LoggerFactory.getLogger(DsfinvkParser.class);
 
   private static final Map<String, Class<?>> TABLE_MAP = new HashMap<>();
-  private static final GdpduDataParser GDPDU_DATA_PARSER = new GdpduDataParser();
 
   public static void parseAndValidate(String indexXmlFile) throws IOException, ParsingException {
     parseAndValidate(new File(Objects.requireNonNull(indexXmlFile)));
@@ -53,7 +47,7 @@ public class DsfinvkParser {
 
   public static void parseAndValidate(File indexXmlFile) throws IOException, ParsingException {
     Objects.requireNonNull(indexXmlFile);
-    DataSet index = GdpduIndexParser.parseXmlFile(indexXmlFile, GdpduIndexParser.ParseMode.LENIENT);
+    DataSet index = GdpduIndexParser.parseXmlFile(indexXmlFile);
 
     for (Media media : index.getMedia()) {
       for (Table table : media.getTables()) {
@@ -93,7 +87,7 @@ public class DsfinvkParser {
   }
 
   public static <T> List<T> parseTable(File indexXml, String tableName, Class<T> clazz) throws ParsingException {
-    return GDPDU_DATA_PARSER.parseTable(indexXml, tableName, clazz);
+    return  GdpduDataParser.parseTable(indexXml, tableName, clazz);
   }
 
   public static Class<?> getClassForFilename(String fileName) {
@@ -123,7 +117,7 @@ public class DsfinvkParser {
     TABLE_MAP.put(StammKassen.FILENAME, StammKassen.class);
     TABLE_MAP.put(StammOrte.FILENAME, StammOrte.class);
     TABLE_MAP.put(StammTerminals.FILENAME, StammTerminals.class);
-    //TABLE_MAP.put(StammTse.F)
+    TABLE_MAP.put(StammTse.FILENAME, StammTse.class);
     TABLE_MAP.put(StammUst.FILENAME, StammUst.class);
   }
 
